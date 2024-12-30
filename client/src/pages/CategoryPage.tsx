@@ -7,13 +7,13 @@ import { Project } from '../types/ProjectDescription.ts';
 
 const CategoryPage: React.FC = () => {
     const { category } = useParams();
-    const [projects, setProjects] = useState<Project[]>([]); // Explicitly define the type of state
-    const [loading, setLoading] = useState(true); // Manage loading state
+    const [projects, setProjects] = useState<Project[]>([]);
+    const [loading, setLoading] = useState(true);
 
     // Fetch projects for the current category
     useEffect(() => {
         const fetchProjects = async () => {
-            setLoading(true); // Start loading
+            setLoading(true);
             try {
                 const data = await getProjectsByCategory(category || '');
                 setProjects(data);
@@ -21,11 +21,11 @@ const CategoryPage: React.FC = () => {
                 console.error('Error fetching projects:', error);
                 setProjects([]);
             }
-            setLoading(false); // Loading finished
+            setLoading(false); 
         };
 
         fetchProjects();
-    }, [category]); // Re-run when the category changes
+    }, [category]);
 
     const fetchCategoryProjects = async (page: number) => {
         const pageSize = 10; // Limit to 10 projects per page
@@ -34,7 +34,7 @@ const CategoryPage: React.FC = () => {
     };
 
     if (loading) {
-        return <Loader />; // Use the Loader component while loading
+        return <Loader />;
     }
 
     if (!projects.length) {
@@ -51,7 +51,7 @@ const CategoryPage: React.FC = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-6 capitalize">{category} Projects</h1>
+            <h1 className="text-3xl font-bold mb-6 capitalize">{category}</h1>
             <ThumbnailGrid fetchMoreData={fetchCategoryProjects} />
         </div>
     );

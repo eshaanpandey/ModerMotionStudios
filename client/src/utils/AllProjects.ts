@@ -5,7 +5,7 @@ const projects: Project[] = [
         id: '1',
         title: 'Maybe Song',
         description: 'This is the cover of the song \'Maybe\'.',
-        category: 'products',
+        category: 'projects',
         thumbnailUrl: '/assets/images/MaybeThumbnail.png',
         videoUrl: 'https://drive.google.com/file/d/1wtJKo5BXiPvVbSIgmpZe0r-bicgYMBaZ/view',
         images: [
