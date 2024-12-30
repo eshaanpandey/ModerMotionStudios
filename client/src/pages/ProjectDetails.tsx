@@ -18,7 +18,7 @@ const ProjectDetails: React.FC = () => {
     };
 
     fetchProject();
-    
+
     return () => {
         setProject(null);
         setLoading(false);
@@ -69,6 +69,7 @@ const ProjectDetails: React.FC = () => {
             <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
               {/* 16:9 Aspect Ratio */}
               <iframe
+                title="projec's main video"
                 src={`https://drive.google.com/file/d/${
                   project.videoUrl.split("/d/")[1].split("/")[0]
                 }/preview`}
@@ -94,7 +95,7 @@ const ProjectDetails: React.FC = () => {
             <img
               key={index}
               src={getDriveImageUrl(image)}
-              alt={`Project Image ${index + 1}`}
+              alt={`Project's Sample ${index + 1}`}
               className="w-full rounded shadow"
               onError={(e) => (e.currentTarget.src = "/assets/images/sample3.jpg")}
             />
