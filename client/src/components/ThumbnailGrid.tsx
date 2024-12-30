@@ -66,6 +66,7 @@ const ThumbnailGrid: React.FC<ThumbnailGridProps> = ({ fetchMoreData }) => {
           key={project.id}
           id={project.id}
           title={project.title}
+          year={project.year}
           thumbnail={project.thumbnailUrl} // Lazy-loaded below
         />
       ))}

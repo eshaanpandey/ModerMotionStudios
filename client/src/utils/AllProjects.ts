@@ -4,6 +4,7 @@ const projects: Project[] = [
     {
         id: '1',
         title: 'Maybe Song',
+        year: 2023,
         description: 'This is the cover of the song \'Maybe\'.',
         category: 'projects',
         thumbnailUrl: '/assets/images/MaybeThumbnail.png',
@@ -16,6 +17,7 @@ const projects: Project[] = [
     {
         id: '2',
         title: 'Project 2',
+        year: 2024,
         description: 'Description for project two',
         category: 'reels',
         thumbnailUrl: '/assets/images/sample1.jpg',
@@ -23,6 +25,7 @@ const projects: Project[] = [
     {
         id: '3',
         title: 'Project 3',
+        year: 2023,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: '/assets/images/sample2.webp',
@@ -30,6 +33,7 @@ const projects: Project[] = [
     {
         id: '4',
         title: 'Project 4',
+        year: 2023,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: '/assets/images/sample3.jpg',
@@ -37,6 +41,7 @@ const projects: Project[] = [
     {
         id: '5',
         title: 'Project 5',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -44,6 +49,7 @@ const projects: Project[] = [
     {
         id: '6',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -51,6 +57,7 @@ const projects: Project[] = [
     {
         id: '7',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -58,6 +65,7 @@ const projects: Project[] = [
     {
         id: '8',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -65,6 +73,7 @@ const projects: Project[] = [
     {
         id: '9',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -72,6 +81,7 @@ const projects: Project[] = [
     {
         id: '10',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -79,6 +89,7 @@ const projects: Project[] = [
     {
         id: '11',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -86,6 +97,7 @@ const projects: Project[] = [
     {
         id: '12',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -93,6 +105,7 @@ const projects: Project[] = [
     {
         id: '13',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -100,6 +113,7 @@ const projects: Project[] = [
     {
         id: '14',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -107,6 +121,7 @@ const projects: Project[] = [
     {
         id: '15',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -114,6 +129,7 @@ const projects: Project[] = [
     {
         id: '16',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -121,6 +137,7 @@ const projects: Project[] = [
     {
         id: '17',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -128,6 +145,7 @@ const projects: Project[] = [
     {
         id: '18',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -135,6 +153,7 @@ const projects: Project[] = [
     {
         id: '19',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -142,6 +161,7 @@ const projects: Project[] = [
     {
         id: '20',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -149,6 +169,7 @@ const projects: Project[] = [
     {
         id: '21',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -156,6 +177,7 @@ const projects: Project[] = [
     {
         id: '22',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -163,6 +185,7 @@ const projects: Project[] = [
     {
         id: '23',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -170,6 +193,7 @@ const projects: Project[] = [
     {
         id: '24',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -177,6 +201,7 @@ const projects: Project[] = [
     {
         id: '25',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -184,6 +209,7 @@ const projects: Project[] = [
     {
         id: '26',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -191,6 +217,7 @@ const projects: Project[] = [
     {
         id: '27',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -198,6 +225,7 @@ const projects: Project[] = [
     {
         id: '28',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -205,6 +233,7 @@ const projects: Project[] = [
     {
         id: '29',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
@@ -212,6 +241,7 @@ const projects: Project[] = [
     {
         id: '30',
         title: 'Project Three',
+        year: 2024,
         description: 'Description for project three',
         category: 'reels',
         thumbnailUrl: 'https://via.placeholder.com/150',
