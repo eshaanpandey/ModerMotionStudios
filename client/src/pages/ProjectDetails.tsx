@@ -51,7 +51,7 @@ const ProjectDetails: React.FC = () => {
       <p className="mb-4">{project.description}</p>
 
       {project.thumbnailUrl && (
-        <div className="mb-4">
+        <div className="flex justify-center items-center mb-4">
           <img
             src={getDriveImageUrl(project.thumbnailUrl)} // Ensure the URL is correctly processed
             alt={project.title}
