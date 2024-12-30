@@ -1,9 +1,64 @@
+/* Styling for active nav-link */
 .nav-link.active {
-    border-bottom: 2px solid white; 
-    padding-bottom: 4px; 
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
     font-weight: bold;
 }
 
 .nav-link:hover {
     cursor: pointer;
+}
+
+/* Shared styles for mobile and desktop links */
+.nav-link {
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 1024px) {
+    .nav-link {
+        display: block;
+        text-align: center;
+    }
+
+    .lg\\:hidden {
+        display: block;
+    }
+
+    .lg\\:block {
+        display: none;
+    }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 1024px) {
+    .nav-link {
+        display: inline-block;
+    }
+}
+
+/* Shared utility classes */
+.bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.bg-blue-500 {
+    background-color: #4299e1;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-yellow-400 {
+    color: #ecc94b;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
 }
