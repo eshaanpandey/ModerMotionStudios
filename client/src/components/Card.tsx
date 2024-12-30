@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({ id, title, thumbnail, year }) => {
   return (
     <Link
       to={`/project/${id}`}
-      className="block rounded-lg shadow-lg hover:shadow-2xl relative group transition-all duration-300"
+      className="group block rounded-lg shadow-lg hover:shadow-2xl relative transition-all duration-300"
     >
       <img
         src={thumbnail}
