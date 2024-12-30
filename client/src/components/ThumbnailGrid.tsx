@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import Loader from "./Loader.tsx";
 import Card from "./Card.tsx";
 import { Project } from "../types/ProjectDescription.ts";
@@ -13,32 +13,36 @@ const ThumbnailGrid: React.FC<ThumbnailGridProps> = ({ fetchMoreData }) => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const loaderRef = useRef<HTMLDivElement | null>(null);
-  const projectSet = useRef<Set<string>>(new Set()); // Track unique project IDs.
+  const projectSet = useRef<Set<string>>(new Set());
 
-  const loadData = async () => {
-    if (loading || !hasMore) return; // Prevent unnecessary calls.
+  const loadData = useCallback(async () => {
+    if (loading || !hasMore) return;
     setLoading(true);
 
-    const data = await fetchMoreData(page);
+    try {
+      const data = await fetchMoreData(page);
 
-    if (data.length === 0) {
-      setHasMore(false); // No more projects to load.
-    } else {
-      // Filter out duplicate projects.
-      const uniqueProjects = data.filter((project) => !projectSet.current.has(project.id));
-      uniqueProjects.forEach((project) => projectSet.current.add(project.id));
+      if (data.length === 0) {
+        setHasMore(false);
+      } else {
+        const uniqueProjects = data.filter(
+          (project) => !projectSet.current.has(project.id)
+        );
+        uniqueProjects.forEach((project) => projectSet.current.add(project.id));
 
-      setProjects((prev) => [...prev, ...uniqueProjects]);
-      setPage((prev) => prev + 1); // Increment page number.
+        setProjects((prev) => [...prev, ...uniqueProjects]);
+        setPage((prev) => prev + 1); // Increment page for the next fetch.
+      }
+    } catch (error) {
+      console.error("Error loading data:", error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
-  };
+  }, [fetchMoreData, hasMore, loading, page]);
 
   useEffect(() => {
-    // Load the initial 10 projects on component mount.
-    loadData();
-  }, []);
+    loadData(); // Load the initial batch of items.
+  }, [loadData]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,13 +51,13 @@ const ThumbnailGrid: React.FC<ThumbnailGridProps> = ({ fetchMoreData }) => {
           loadData();
         }
       },
-      { threshold: 1.0 }
+      { threshold: 1.0 } // Trigger when the loader is fully visible.
     );
 
     if (loaderRef.current) observer.observe(loaderRef.current);
 
     return () => observer.disconnect();
-  }, [loading, hasMore]);
+  }, [loadData, loading]);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -62,16 +66,15 @@ const ThumbnailGrid: React.FC<ThumbnailGridProps> = ({ fetchMoreData }) => {
           key={project.id}
           id={project.id}
           title={project.title}
-          thumbnail={project.thumbnailUrl}
+          thumbnail={project.thumbnailUrl} // Lazy-loaded below
         />
       ))}
       {loading && projects.length === 0 && (
-    <div className="flex justify-center items-center h-[200px]">
-        <Loader />
-    </div>
-)}
-{hasMore && <div ref={loaderRef}></div>}
-
+        <div className="flex justify-center items-center h-[200px]">
+          <Loader />
+        </div>
+      )}
+      {hasMore && <div ref={loaderRef} style={{ height: "1px" }}></div>}
     </div>
   );
 };
