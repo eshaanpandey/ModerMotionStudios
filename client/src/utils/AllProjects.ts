@@ -4,9 +4,9 @@ const projects: Project[] = [
     {
         id: '1',
         title: 'Maybe Song',
-        description: 'The cover for Maybe Song',
+        description: 'This is the cover of the song \'Maybe\'.',
         category: 'products',
-        thumbnailUrl: '/assets/images/sample3.jpg',
+        thumbnailUrl: '/assets/images/MaybeThumbnail.png',
         videoUrl: 'https://drive.google.com/file/d/1wtJKo5BXiPvVbSIgmpZe0r-bicgYMBaZ/view',
         images: [
             '/assets/images/sample1.jpg', 
@@ -15,7 +15,7 @@ const projects: Project[] = [
     },
     {
         id: '2',
-        title: 'Project Two',
+        title: 'Project 2',
         description: 'Description for project two',
         category: 'reels',
         thumbnailUrl: '/assets/images/sample1.jpg',
@@ -32,7 +32,7 @@ const projects: Project[] = [
         title: 'Project 4',
         description: 'Description for project three',
         category: 'reels',
-        thumbnailUrl: 'https://via.placeholder.com/150',
+        thumbnailUrl: '/assets/images/sample3.jpg',
     },
     {
         id: '5',
