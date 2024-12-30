@@ -250,7 +250,7 @@ export const fetchMoreData = async (page: number): Promise<Project[]> => {
   };
 
 export const fetchMoreDataForCategories = async (page: number, category: string): Promise<Project[]> => {
-    const projectsInCategory = await getProjectsByCategory(category);
+    // const projectsInCategory = await getProjectsByCategory(category);
     const pageSize = 10; // Load 10 projects per page.
     const startIndex = (page - 1) * pageSize;
     const endIndex = page * pageSize;
