@@ -42,17 +42,17 @@ const Navbar: React.FC = React.memo(() => {
                 </NavLink>
 
                 <div className="hidden lg:flex items-center gap-8">
-                    <NavLink to="/category/products" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
-                        Products
+                    <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/category/projects" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
+                        Projects
                     </NavLink>
                     <NavLink to="/category/reels" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
                         Reels
                     </NavLink>
-                    <NavLink to="/category/designs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
-                        Designs
-                    </NavLink>
-                    <NavLink to="/category/videos" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
-                        Videos
+                    <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
+                        About
                     </NavLink>
                     <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} ${darkMode ? 'text-white' : 'text-white'}`}>
                         Contact Us
@@ -78,17 +78,17 @@ const Navbar: React.FC = React.memo(() => {
                 } ${darkMode ? 'bg-gray-800 text-white' : 'bg-blue-500 text-white'}`}
             >
                 <div className="flex flex-col items-center gap-4 p-4">
-                    <NavLink to="/category/products" className="nav-link text-white" onClick={closeMenu}>
-                        Products
+                    <NavLink to="/" className="nav-link text-white" onClick={closeMenu}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/category/projects" className="nav-link text-white" onClick={closeMenu}>
+                        Projects
                     </NavLink>
                     <NavLink to="/category/reels" className="nav-link text-white" onClick={closeMenu}>
                         Reels
                     </NavLink>
-                    <NavLink to="/category/designs" className="nav-link text-white" onClick={closeMenu}>
-                        Designs
-                    </NavLink>
-                    <NavLink to="/category/videos" className="nav-link text-white" onClick={closeMenu}>
-                        Videos
+                    <NavLink to="/about" className="nav-link text-white" onClick={closeMenu}>
+                        About
                     </NavLink>
                     <NavLink to="/contact" className="nav-link text-white" onClick={closeMenu}>
                         Contact Us
