@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
   const skills = ["Web Development", "React.js", "Node.js", "C++", "Database Management"];
 
   return (
-    <div className="container mx-auto p-6 max-w-5xl bg-white dark:bg-gray-800 rounded-lg shadow-lg mt-12">
+    <div className="container mx-auto p-6 max-w-5xl bg-white dark:bg-gray-800 rounded-lg shadow-lg mt-[5vh] mb-[5vh]">
       {/* Heading */}
       <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-8 text-center">
         About Me
